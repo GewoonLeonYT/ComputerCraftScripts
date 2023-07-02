@@ -4,7 +4,7 @@ end
 local function setTerm(previous, current)
     previous = tostring(previous) or ''
     current = tostring(current) or ''
-    if #previous < #current then
+    if #previous > #current then
         terminal.clearLine()
     end
     terminal.write(current)
