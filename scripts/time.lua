@@ -18,7 +18,11 @@ dayCleared = 0
 
 function showTime()
     time = os.time()
-    formattedTime = string.format("%05s", textutils.formatTime(time, true))
+    formattedTime = textutils.formatTime(time, true)
+    formattedHours = string.format("%02d" , tonumber(string.sub(formattedTime, -5, -4)))
+    formattedSeconds = string.sub(formattedTime, -3, -1)
+    formattedTime = formattedHours .. formattedSeconds
+
     ticks = (time * 1000 + 18000) % 24000
 
     if ticks < ticksSunset then
