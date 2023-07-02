@@ -1,5 +1,5 @@
 terminal = peripheral.find('monitor')
-local termLib = require("termLib")
+local termLib = require("libs.termLib")
 termLib.initialize(terminal)
 
 terminal.clear()
