@@ -3,7 +3,7 @@ if not turtle then
 else
     turtle.select(1)
     while true do
-        if turtle.getItemSpace == 0 then
+        if turtle.getItemSpace() == 0 then
             if turtle.getSelectedSlot() == 16 then
                 turtle.turnLeft()
                 turtle.turnLeft()
