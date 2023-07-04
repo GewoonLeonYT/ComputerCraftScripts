@@ -19,6 +19,7 @@ else
         while turtle.getItemSpace() ~= 0 do
             if turtle.detect() then
                 turtle.dig()
+                sleep(0)
             end
         end
     end
