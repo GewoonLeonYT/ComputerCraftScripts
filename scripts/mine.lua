@@ -16,7 +16,7 @@ else
                 turtle.turnLeft()
                 turtle.turnLeft()
             end
-            if not restarting then
+            if restarting == 0 then
                 turtle.select(turtle.getSelectedSlot() + 1)
             end
             restarting = 0
