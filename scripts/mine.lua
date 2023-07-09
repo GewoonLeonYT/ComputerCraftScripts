@@ -1,4 +1,6 @@
 restarting = 0
+blockToMine = "minecraft:cobblestone"
+
 if not turtle then
     printError("Not a turtle!")
 else
@@ -23,7 +25,11 @@ else
         end
         while turtle.getItemSpace() ~= 0 do
             if turtle.detect() then
-                turtle.dig()
+                if turtle.inspect()["name"] == blockToMine then
+                    turtle.dig()
+                else
+                    turtle.turnLeft() 
+                end
                 sleep(0)
             end
         end
