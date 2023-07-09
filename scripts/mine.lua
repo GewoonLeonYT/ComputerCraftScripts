@@ -25,7 +25,8 @@ else
         end
         while turtle.getItemSpace() ~= 0 do
             if turtle.detect() then
-                if turtle.inspect()["name"] == blockToMine then
+                a, blockData = turtle.inspect()
+                if blockData == blockToMine then
                     turtle.dig()
                 else
                     turtle.turnLeft() 
