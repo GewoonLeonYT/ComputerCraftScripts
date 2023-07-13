@@ -1,7 +1,7 @@
 terminal = peripheral.find('monitor')
 package.path = package.path .. ";../libs/termLib.lua"
 local termLib = require("termLib")
-termLib.initialize(terminal)
+termLib.initialise(terminal)
 
 terminal.clear()
 prevTime = 0

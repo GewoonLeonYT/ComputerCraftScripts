@@ -1,4 +1,4 @@
-local function initialize(terminal)
+local function initialise(terminal)
     terminal = terminal
 end
 local function setTerm(previous, current)
@@ -21,4 +21,4 @@ local function setAdvance(previous, current)
     nextLine()
 end
 
-return { initialize = initialize, setTerm = setTerm, nextLine = nextLine, setAdvance = setAdvance }
+return { initialise = initialise, initialize = initialise, setTerm = setTerm, nextLine = nextLine, setAdvance = setAdvance }
