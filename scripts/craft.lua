@@ -15,7 +15,7 @@ while true do
         turtle.select(craftingSlots[i])
         while turtle.getItemSpace() ~= 0 do
             turtle.suck(turtle.getItemSpace() - turtle.getItemCount())
-        end  l
+        end
     end 
     turtle.select(16)
     turtle.craft()
