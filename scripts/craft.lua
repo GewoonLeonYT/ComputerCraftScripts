@@ -7,8 +7,8 @@ a, blockData = turtle.inspect()
 
 while true do
     while blockData ~= "minecraft:chest" do
-        a, blockData = turtle.inspect()
         turtle.turnLeft()
+        a, blockData = turtle.inspect()
         sleep(0)
     end
     for i = 1, #craftingSlots do
