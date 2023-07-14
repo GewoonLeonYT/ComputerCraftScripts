@@ -7,16 +7,15 @@ a, blockData = turtle.inspect()
 
 while true do
     while blockData ~= "minecraft:chest" do
+        a, blockData = turtle.inspect()
         turtle.turnLeft()
         sleep(0)
     end
     for i = 1, #craftingSlots do
         turtle.select(craftingSlots[i])
-        currentSlotAmount = turtle.getItemCount()
-        currentSlotSpace = turtle.getItemSpace()
-        while currentSlotSpace ~= 0 do
-            turtle.suck(currentSlotAmount - currentSlotSpace)
-        end  
+        while turtle.getItemSpace() ~= 0 do
+            turtle.suck(turtle.getItemSpace() - turtle.getItemCount())
+        end  l
     end 
     turtle.select(16)
     turtle.craft()
