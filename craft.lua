@@ -25,4 +25,5 @@ while true do
     turtle.drop()
     turtle.turnLeft()
     turtle.turnLeft()
+    sleep(0)
 end
