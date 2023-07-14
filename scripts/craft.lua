@@ -14,7 +14,7 @@ while true do
     for i = 1, #craftingSlots do
         turtle.select(craftingSlots[i])
         while turtle.getItemSpace() ~= 0 do
-            turtle.suck(turtle.getItemSpace() - turtle.getItemCount())
+            turtle.suck(turtle.getItemSpace())
         end
     end 
     turtle.select(16)
